@@ -27,9 +27,15 @@
     <ClInclude Include="src\Nova\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nova\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nova\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nova\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
