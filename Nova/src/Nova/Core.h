@@ -9,3 +9,8 @@
 #else
 	#error Nova does only support Windows (for now)!
 #endif
+
+// Simple macro for shifting a '1' x amount of steps
+// Used for creating bitfields (i.e. "bit masks")
+// Example: BIT(2) == 100, BIT(0) == 1
+#define BIT(x) (1 << x)

@@ -8,6 +8,8 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+// Ouput stream operator for spdlog
+#include "spdlog/fmt/ostr.h"
 
 namespace Nova {
 	

@@ -31,6 +31,7 @@ project "Nova"
 	includedirs
 	{
 		-- Add more include folders if needed, other 3rd party etc
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -38,7 +39,7 @@ project "Nova"
 	filter "system:windows"			 -- Everything below here, until next "filter" or "project" is Windows-only
 		cppdialect "C++17"			 -- "Only works" for Win, for other OS, flags etc might be needed
 		staticruntime "On"			 -- Link statically
-		systemversion "10.0.17134.0" -- You could use "latest" as well (Windows SDK)
+		systemversion "latest"		 -- You could use "latest" as well (Windows SDK)
 
 		defines
 		{
@@ -97,7 +98,7 @@ project "Nebula"
 	filter "system:windows"			 -- Everything below here, until next "filter" or "project" is Windows-only
 		cppdialect "C++17"			 -- "Only works" for Win, for other OS, flags etc might be needed
 		staticruntime "On"			 -- Link statically
-		systemversion "10.0.17134.0" -- You could use "latest" as well (Windows SDK)
+		systemversion "latest"       -- You could use "latest" as well (Windows SDK)
 
 		defines
 		{

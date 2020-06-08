@@ -4,6 +4,9 @@
     <Filter Include="Nova">
       <UniqueIdentifier>{D9BC897C-C5F3-8A0D-6EE0-70105AF6060F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nova\Events">
+      <UniqueIdentifier>{9D5A0150-0910-7A45-9204-741CFEB87049}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nova.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Nova\EntryPoint.h">
       <Filter>Nova</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nova\Events\ApplicationEvent.h">
+      <Filter>Nova\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nova\Events\Event.h">
+      <Filter>Nova\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nova\Events\KeyEvent.h">
+      <Filter>Nova\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nova\Events\MouseEvent.h">
+      <Filter>Nova\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Nova\Log.h">
       <Filter>Nova</Filter>
