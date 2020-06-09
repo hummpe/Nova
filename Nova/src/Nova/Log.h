@@ -3,9 +3,6 @@
 // TODO: Figure out why this had to be added after including spdlog/spdlog.h -> Would not build otherwise
 #pragma warning(disable : 4996)
 
-
-#include <memory>
-
 #include "Core.h"
 #include "spdlog/spdlog.h"
 // Ouput stream operator for spdlog

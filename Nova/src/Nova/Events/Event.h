@@ -1,11 +1,8 @@
 #pragma once
 
-// TODO: Should be Nova/Core.h - figure out why it doesn't work
+// TODO: Figure out why novapch.h is needed in here, is it because we don't have a .cpp file for any Event etc?
+#include "novapch.h"
 #include "Nova/Core.h"
-
-// TODO: Maybe move these kind of include into "Core.h"?
-#include <string>
-#include <functional>
 
 namespace Nova {
 

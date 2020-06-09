@@ -21,6 +21,10 @@ project "Nova"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	-- Precompiled header for Nova project
+	pchheader "novapch.h"
+	pchsource "Nova/src/novapch.cpp"	-- Only needed for Visual Studio (MSVC Compiler) (needs full path)
+
 	files
 	{
 		-- Add more files if needed, other file extensions etc

@@ -1,3 +1,4 @@
+#include "novapch.h"
 #include "Application.h"
 
 #include "Nova/Events/ApplicationEvent.h"

@@ -2,9 +2,6 @@
 
 #include "Event.h"
 
-// TODO: Maybe move these kind of include into "Core.h"?
-#include <sstream>
-
 namespace Nova {
 	
 	/**

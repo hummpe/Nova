@@ -5,10 +5,10 @@
 		#define NOVA_API __declspec(dllexport)
 	#else
 		#define NOVA_API __declspec(dllimport)
-	#endif
+	#endif // NOVA_BUILD_DLL
 #else
 	#error Nova does only support Windows (for now)!
-#endif
+#endif // NOVA_PLATFORM_WINDOWS
 
 // Simple macro for shifting a '1' x amount of steps
 // Used for creating bitfields (i.e. "bit masks")
