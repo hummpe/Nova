@@ -12,6 +12,12 @@ workspace "Nova"		-- "Solution name"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nova/vendor/GLFW/include"
+
+-- Adding GLFW submodule (and others) premake to this premake script
+include "Nova/vendor/GLFW"
+
 -- Nova {Engine} Project
 project "Nova"
 	location "Nova"
@@ -36,7 +42,15 @@ project "Nova"
 	{
 		-- Add more include folders if needed, other 3rd party etc
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	-- Add links to Nova project to GLFW and opengl32
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	-- WINDOWS
@@ -121,4 +135,3 @@ project "Nebula"
 	filter "configurations:Dist"
 		defines "NOVA_DIST"
 		optimize "On"
-

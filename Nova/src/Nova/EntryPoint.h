@@ -15,7 +15,6 @@ int main(int argc, char** argv)
 	NOVA_INFO("Initalized Client Logger!");
 
 	auto app = Nova::CreateApplication();
-	NOVA_INFO("Initalized App!");
 	app->Run();
 	delete app;
 }

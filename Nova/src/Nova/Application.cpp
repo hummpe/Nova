@@ -4,11 +4,14 @@
 #include "Nova/Events/ApplicationEvent.h"
 #include "Nova/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Nova
 {
 
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 
@@ -18,18 +21,13 @@ namespace Nova
 
 	void Application::Run()
 	{
-		// TODO: Test of WindowResizeEvent - Remove it
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			NOVA_TRACE(e);
+			// Magenta
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			NOVA_ERROR(e);
-		}
-
-		while (true);
 	}
 
 }
