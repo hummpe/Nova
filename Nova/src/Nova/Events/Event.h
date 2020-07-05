@@ -93,7 +93,7 @@ namespace Nova {
 			// If Event you are trying to dispatch matched the type
 			// of function func, it will run it and you have
 			// successfully dispatched that event
-			if (m_Event.GetEventType == T::GetStaticType())
+			if (m_Event.GetEventType() == T::GetStaticType())
 			{
 				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
